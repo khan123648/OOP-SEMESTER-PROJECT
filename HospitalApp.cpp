@@ -132,6 +132,9 @@ void HospitalApp::initDoctorMenu()
     // topbar(56) + info-card(60) + section-header(32) + gap(8) = 156 → start at 164
     float bx = 190.f, by = 164.f, bw = 1080.f, bh = 46.f, gap = 10.f;
     Theme::PANEL2, Theme::PANEL3, Theme::TEXT, 13, Theme::BORDER;
+    for (int i = 0; i < DOC_BTN_COUNT; i++)
+    docBtns[i].init(font, labels[i], bx, by + i * (bh + gap), bw, bh,
+        Theme::PANEL2, Theme::PANEL3, Theme::TEXT, 13, Theme::BORDER);
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
